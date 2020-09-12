@@ -1,12 +1,11 @@
 from flask import Flask, render_template, url_for, request
 from werkzeug.utils import secure_filename
 from detect_glasses import get_details
+from give_image_paths import suggest_folder
 import os
-
+import glob
 app=Flask(__name__)
 
-def suggest_folder(data_dict):
-	pass
 
 @app.route('/', methods = ['GET', 'POST'])
 def index():
@@ -14,15 +13,22 @@ def index():
 	aa = url_for('static', filename= 'img/img_lights.jpg')
 	ca = url_for('static', filename= 'img/img_snow.jpg')
 	# return a
-	l=[]
+	recomm_files=[]
 	al=[]
 	cat_l=[]
 	data_dict = {}
 	target = a
 	for i in range(19):
-		l.append(a)
+		recomm_files.append(a)
 		al.append(aa)
 		cat_l.append(ca)
+
+	prefix='static/assets'
+	all_file=[]
+	for filename in glob.iglob(prefix+'/**/*.jpg',recursive = True):
+		all_file.append(filename)
+		# print(filename)
+
 
 	if request.method == 'POST':
 		f = request.files['file']
@@ -30,6 +36,7 @@ def index():
 		print(name)
 		f.save(secure_filename(f.filename))
 		data_dict = get_details(name)
+		recomm_files=suggest_folder(data_dict)
 
 		target = url_for('static', filename= name)[1:]
 		try:
@@ -40,7 +47,7 @@ def index():
 		# txt = '\n'.join(x)
 		# return f'{txt}file uploaded successfully'
 
-	return render_template('index.html', img_upl=target, img_list=l, all_list=al, result=data_dict, cat_list=cat_l)
+	return render_template('index.html', img_upl=target, img_list=recomm_files, all_list=all_file, result=data_dict, cat_list=cat_l)
 
 
 
