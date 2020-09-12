@@ -1,0 +1,64 @@
+---------------
+category
+---------------
+Gender
+	male
+	female
+
+Age
+	0-5 	baby
+	5-18 	young
+	18-40 	middle
+	0-40 	old
+
+Emotion
+	happy
+	sad
+	neutral
+
+---------------
+Accessories
+---------------
+
+Eye Glasses
+Sun Glasses
+Mustache
+Beard
+
+Flask connected with file upload - no need to use camera right now.
+
+got results on webpage
+display the results on site
+
+as per the inference on your image
+we obtained the following information.
+
+12/9/2020 - 03:00
+replace the search button with recommend - make upload possible on template  - upload the images and get result straightway
+
+
+
+\initial values shooudl be none 
+
+
+
+
+integrate the page with the final images - from the user
+by default show different values after updating change the values
+
+
+the index page post method was not enabling me to send the post request 
+images was not possible to send via form - as the path localhost was written there
+which was not present on the instance
+
+when I create a new instance or start or stop it
+the ip changes everytime - i need a fixed ip
+
+so I learned about elastic ip and created an ip for that
+which enabled me to have the same instance with the same ip every time i create an instance
+
+now its solved
+
+have to show the image of the person + show products for which all this is done
+
+change the dictionary of values for accurate methods data display
