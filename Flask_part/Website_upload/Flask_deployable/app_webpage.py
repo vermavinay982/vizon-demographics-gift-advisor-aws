@@ -37,18 +37,6 @@ def index():
 
 	return render_template('index.html', img_list=l, all_list=al, result=data_dict, cat_list=cat_l)
 
-@app.route('/uploader', methods = ['GET', 'POST'])
-def uploader_file():
-   if request.method == 'POST':
-      f = request.files['file']
-      name = f.filename
-      print(name)
-      f.save(secure_filename(f.filename))
-      li = get_details(name)
-      print(li)
-      x = [str(i[1]) for i in li]
-      txt = '\n'.join(x)
-      return f'{txt}file uploaded successfully'
 
 
 if __name__ == '__main__':
