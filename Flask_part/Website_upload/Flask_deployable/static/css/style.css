@@ -806,8 +806,9 @@ textarea.input {
   margin: 30px 0px;
   background-color: #E4E7ED;
   background-image: url('../img/hotdeal.png');
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
+  background-size: 300px 600px;
 }
 
 .hot-deal {

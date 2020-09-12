@@ -86,7 +86,9 @@
 									<h3 style="color:white;">Get Recommended Products Within Seconds <br><br> </h3>
 									<h4 style="color:white;">Select Photo of the Person for which you are buying !! </h4>
 									</div>
-								    <form action = "http://3.225.6.227:3000/" method = "POST" enctype = "multipart/form-data">
+								    <!-- <form action = "http://3.225.6.227:3000/" method = "POST" enctype = "multipart/form-data"> -->
+								    <form action = "http://localhost:3000/" method = "POST" enctype = "multipart/form-data">
+
 										<input type='file' name='file' style="text-align: center" class="input">
 							        	<input class="search-btn" type = "submit"/>
 							      	</form>
@@ -200,7 +202,8 @@
 
 
 		<!-- HOT DEAL SECTION -->
-		<div id="hot-deal" class="section">
+  
+		<div style="background-image: url('{{img_upl}}');" id="hot-deal" class="section">
 			<!-- container -->
 			<div class="container">
 				<!-- row -->
@@ -208,6 +211,7 @@
 					<div class="col-md-12">
 						<div class="hot-deal">
 
+							<!-- <img src="{{img_upl}}" height="500px" alt=""> -->
 							<ul class="hot-deal-countdown">
 								{% for key,value in result.items() %}
 								<li>
@@ -240,7 +244,7 @@
 							<h2 class="text-uppercase">Recommended Items</h2>
 							<h2>Based on your Photo </h2>
 							<p>New Collection Up to 50% OFF</p>
-							<a class="primary-btn cta-btn" href="#">Shop now</a>
+							<a class="primary-btn cta-btn" href="#buy">Shop now</a>
 						</div>
 					</div>
 				</div>
@@ -262,7 +266,7 @@
 					<!-- section title -->
 					<div class="col-md-12">
 						<div class="section-title">
-							<h3 class="title">New Products</h3>
+							<h3 id=buy class="title">Recommended Products</h3>
 							<div class="section-nav">
 								<ul class="section-tab-nav tab-nav">
 									<li class="active"><a data-toggle="tab" href="#tab1">Laptops</a></li>
@@ -803,6 +807,13 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="newsletter">
+
+						<a style="align-content:center;" class="primary-btn cta-btn" href="#">Try Again for New Face</a>
+						<br>
+						<br>
+						<br>
+						<br>
+						
 							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
 							<form>
 								<input class="input" type="email" placeholder="Enter Your Email">

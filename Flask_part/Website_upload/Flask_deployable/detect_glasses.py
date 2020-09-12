@@ -65,30 +65,31 @@ def get_details(photo):
 
     print('Detected faces for ' + photo)    
 
-    li = []
+    data_dict = {}
     for faceDetail in response['FaceDetails']:
-        a = get_emotion(faceDetail)
-        li.append(a)
-        a = get_age(faceDetail)
-        li.append(a)
-        a = get_attrib('Eyeglasses',faceDetail)
-        li.append(a)
-        a = get_attrib('Gender',faceDetail)
-        li.append(a)
-        a = get_attrib('Mustache',faceDetail)
-        li.append(a)
-        a = get_attrib('Sunglasses',faceDetail)
-        li.append(a)
-        a = get_attrib('Beard',faceDetail)
-        li.append(a)
-    
-    return li
+        emotion = get_emotion(faceDetail)[1]
+        data_dict['Emotion'] = emotion
+
+        m,n= get_age(faceDetail)
+        data_dict['Age']=(m+n)/2
+
+        eyeglasses = get_attrib('Eyeglasses',faceDetail)[1]
+        data_dict['Eyeglasses'] = eyeglasses
+
+        gender = get_attrib('Gender',faceDetail)[1]
+        data_dict['Gender'] = gender
+
+        data_dict['Mustache'] = get_attrib('Mustache',faceDetail)[1]
+        data_dict['Sunglasses'] = get_attrib('Sunglasses',faceDetail)[1]
+        data_dict['Beard'] = get_attrib('Beard',faceDetail)[1]
+    return data_dict
 
 def main():
-    photo='vinay.jpg'
-    face_count=detect_faces(photo)
-    print("Faces detected: " + str(face_count))
-
+    photo='im2.jpg'
+    # face_count=detect_faces(photo)
+    # print("Faces detected: " + str(face_count))
+    details = get_details(photo)
+    print(details)
 
 if __name__ == "__main__":
     main()
