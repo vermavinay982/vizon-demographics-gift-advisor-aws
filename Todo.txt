@@ -62,3 +62,9 @@ now its solved
 have to show the image of the person + show products for which all this is done
 
 change the dictionary of values for accurate methods data display
+
+
+13/9/2020 2:50 am 
+finalised and hosted online again.
+aws issues when size of image is too big
+shift bottom to top
