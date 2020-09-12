@@ -18,4 +18,4 @@ def index():
 	return render_template('index.html', img_list=l, all_list=al, result=dict, cat_list=cat_l)
 
 if __name__ == '__main__':
-	app.run(debug=True)
+	app.run(host='0.0.0.0', port=3000,debug=True)
