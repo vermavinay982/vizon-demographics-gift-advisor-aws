@@ -68,3 +68,62 @@ change the dictionary of values for accurate methods data display
 finalised and hosted online again.
 aws issues when size of image is too big
 shift bottom to top
+
+
+camera is not used privacy issues not there
+
+
+
+
+
+Theme: Deep learning computer vision and image processing
+
+5 slide ppt
+summary of solution
+
+Experience and skill of members
+Working Experience of 1.5 year full time Computer Vision Engineer at leading Computer Vision Startup
+also a college student in final year of BTech Course ECE. Joined as a full time employee during my course 3rd year.
+
+Skills
+
+Full Stack Web Development
+Machine Learning
+Artificial Intelligence
+Computer Vision
+Python
+Flask
+
+Highlight aws service being used
+Rekognition - Detect Faces
+EC2
+S3
+Elastic IP
+Elastic File System
+Sagemaker
+
+application code in bit bucket
+readme.md
+
+innovative solution
+- we have to choose the items that we want to buy and the recommendation system requires data to predict our next possible purchase.
+But what if we are new to the website
+Or if we want to purchase for some other person. but the recommendation will still be provided based on our previous purchase.
+this method helps the users to buy items without choosing much what to buy
+the recommendation is based on the person demographics which is not biased toward recommendation system
+
+business potential
+- this project is having a huge business potential as it can be integrated with every shopping site that will help the customer to buy things easily and also the sales of the website will increase
+most of the times the customer gets confused what to buy as he is not able to get what he want.
+which make him move out of that site.
+
+integration of aws services
+This whole project is built from top to bottom on aws.
+Sagemaker was used for writing the code, test it and debug.
+aws recognition enables the simple webpage to have integration with Ai
+since the processing is done on cloud it gives out the result very fast
+after the complete project was working I have deployed it on EC2 instance
+with EC2 instance the ip was changing everytime the instance is started 
+for that I have used Elastic IP that gave me reliability with the same allocated Ip everytime.
+
+

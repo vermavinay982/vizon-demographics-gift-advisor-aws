@@ -85,7 +85,7 @@ def get_details(photo):
     return data_dict
 
 def main():
-    photo='im2.jpg'
+    photo='photo- 14 947 90108377-be9c29b29330.jfif'
     # face_count=detect_faces(photo)
     # print("Faces detected: " + str(face_count))
     details = get_details(photo)
