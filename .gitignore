@@ -1,6 +1,6 @@
 config.py
 __pycache__
 *.jpg
-!Testing_Images/
+!Testing_Images/*.jpg
 !static/img/
-!static/assets/
+!static/assets/**
