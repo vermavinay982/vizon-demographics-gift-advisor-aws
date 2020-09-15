@@ -34,7 +34,7 @@ AWS_SECRET_KEY=''
 * Based on your image the system will suggest you products.
 
 ## Front Page
-![alt text](https://github.com/vermavinay982/Vis-Zon-Shopping-Platform/screenshots/women.png)
+![alt text](screenshots/women.png)
 
 ## Statistics
 ![alt text](screenshots/stats.png)
