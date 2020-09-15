@@ -1,4 +1,4 @@
-from detect_glasses import get_details
+from utils.detect_glasses import get_details
 import os
 import glob
 

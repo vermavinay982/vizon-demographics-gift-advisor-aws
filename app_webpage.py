@@ -1,10 +1,21 @@
 from flask import Flask, render_template, url_for, request
 from werkzeug.utils import secure_filename
-from detect_glasses import get_details
-from give_image_paths import suggest_folder
+from utils.detect_glasses import get_details
+from utils.give_image_paths import suggest_folder
 import os
 import glob
+import argparse
+
 app=Flask(__name__)
+
+
+ap = argparse.ArgumentParser()
+ap.add_argument("-host", "--host", type=str, required=False,
+                help="Enter host domain name - default localhost", default=None)
+ap.add_argument("-p", "--port", type=int, required=False,
+                help="Enter port number - default localhost", default=3000)
+args = vars(ap.parse_args())
+
 
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -18,6 +29,18 @@ def index():
 	cat_l=[]
 	data_dict = {}
 	target = a
+
+	if args['host']==None:
+		host='localhost'
+	else:
+		host=args['host']
+
+	port = args['port']
+
+	# url = "http://3.225.6.227:3000/"
+
+	url = f"http://{host}:{port}/"
+
 	for i in range(19):
 		recomm_files.append(a)
 		al.append(aa)
@@ -47,9 +70,9 @@ def index():
 		# txt = '\n'.join(x)
 		# return f'{txt}file uploaded successfully'
 
-	return render_template('index.html', img_upl=target, img_list=recomm_files, all_list=all_file, result=data_dict, cat_list=cat_l)
+	return render_template('index.html', img_upl=target, img_list=recomm_files, all_list=all_file, result=data_dict, cat_list=cat_l,url=url)
 
 
 
 if __name__ == '__main__':
-	app.run(host='0.0.0.0', port=3000,debug=True)
+	app.run(host='0.0.0.0', port=args['port'],debug=True)
