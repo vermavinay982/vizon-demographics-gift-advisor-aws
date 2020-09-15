@@ -30,7 +30,13 @@ AWS_SECRET_KEY=''
      * `python app_webpage.py --host 3.4.5.6 -p 3000`
   
 * Once the server is running without issues, open the link localhost:3000/
+* Choose your image and upload it to the wesbite.
+* Based on your image the system will suggest you products.
 
+
+![alt text](screenshot/women.png)
+![alt text](screenshot/stats.png)
+![alt text](screenshot/angry.png)
 
 
 ## Who do I talk to? ##
