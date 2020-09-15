@@ -33,10 +33,14 @@ AWS_SECRET_KEY=''
 * Choose your image and upload it to the wesbite.
 * Based on your image the system will suggest you products.
 
+## Front Page
+![alt text](https://github.com/vermavinay982/Vis-Zon-Shopping-Platform/screenshots/women.png)
 
-![alt text](screenshot/women.png)
-![alt text](screenshot/stats.png)
-![alt text](screenshot/angry.png)
+## Statistics
+![alt text](screenshots/stats.png)
+
+## Angry Person - Detection
+![alt text](screenshots/angry.png)
 
 
 ## Who do I talk to? ##
