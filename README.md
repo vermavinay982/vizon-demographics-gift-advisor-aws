@@ -25,9 +25,9 @@ AWS_SECRET_KEY=''
 * run the `app_webpage.py` file and keep it running in one terminal.
 * Arguments - default is host = localhost, port = 3000
   * If Running on local host
-     * python app_webpage.py --host localhost -p 3000
+     * `python app_webpage.py --host localhost -p 3000`
   * If running on different server - replace it with your IP
-     * python app_webpage.py --host 3.4.5.6 -p 3000
+     * `python app_webpage.py --host 3.4.5.6 -p 3000`
   
 * Once the server is running without issues, open the link localhost:3000/
 
