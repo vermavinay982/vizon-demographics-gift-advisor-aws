@@ -1,6 +1,8 @@
 # Vis-Zon-Shopping-Platform
 
-Server-Client Architecture for Detecting the duration of hand wash along with using AWS Facial Recognition to determine the identity of the person washing hands. This is to monitor Hand wash compliance.
+Using AWS Facial Recognition to determine best gift for your Gifted One
+
+![alt text](screenshots/women.png)
 
 ## Repository Metadata ##
 
@@ -33,16 +35,11 @@ AWS_SECRET_KEY=''
 * Choose your image and upload it to the wesbite.
 * Based on your image the system will suggest you products.
 
-## Front Page
-![alt text](screenshots/women.png)
-
 ## Statistics
 ![alt text](screenshots/stats.png)
 
 ## Angry Person - Detection
 ![alt text](screenshots/angry.png)
 
-
 ## Who do I talk to? ##
-
 * [Vinay Kumar Verma, Developer and Creator](mailto:vermavinay982@gmail.com ) - For Facial Recognition using AWS, Pipeline, Webpage Part
